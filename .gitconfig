@@ -1,0 +1,10 @@
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[user]
+	email = randy@burntbit.com
+	name = Randy
+[push]
+	default = simple
