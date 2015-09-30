@@ -8,3 +8,7 @@
 	name = Randy
 [push]
 	default = simple
+[github]
+	user = randy909
+[include]
+	path = .gitconfig.os
