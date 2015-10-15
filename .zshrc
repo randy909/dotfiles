@@ -9,7 +9,7 @@ if ! zgen saved; then
 
     # plugins
     zgen oh-my-zsh plugins/brew
-    zgen oh-my-zsh plugins/colored-man
+    zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/osx
