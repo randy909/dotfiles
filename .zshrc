@@ -27,6 +27,9 @@ if ! zgen saved; then
     # theme
     zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
+    # colors
+    zgen load randy909/base16-shell base16-randy-darker.dark.sh
+
     # save all to init script
     zgen save
 fi
