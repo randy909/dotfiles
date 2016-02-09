@@ -8,6 +8,7 @@ if ! zgen saved; then
     zgen oh-my-zsh
 
     # plugins
+    zgen oh-my-zsh plugins/adb
     zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/command-not-found
@@ -29,3 +30,5 @@ if ! zgen saved; then
     # save all to init script
     zgen save
 fi
+
+source "${HOME}/.zshrc.local"
