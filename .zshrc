@@ -12,9 +12,14 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/fasd
     zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/gradle
     zgen oh-my-zsh plugins/osx
+    zgen oh-my-zsh plugins/pj
     zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/thefuck
+    zgen oh-my-zsh plugins/vim-interaction
     zgen load chrissicool/zsh-256color
     zgen load djui/alias-tips
     zgen load zsh-users/zsh-history-substring-search
