@@ -1,5 +1,5 @@
 # load zgen
-source "${HOME}/.zgen/zgen/zgen.zsh"
+source "${HOME}/.zgen/zgen.zsh"
 
 # check if there's no init script
 if ! zgen saved; then
@@ -39,4 +39,6 @@ if ! zgen saved; then
     zgen save
 fi
 
-source "${HOME}/.zshrc.local"
+if [[ -a ${HOME}/.zshrc.local ]]; then
+    source "${HOME}/.zshrc.local"
+fi
