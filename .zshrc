@@ -1,6 +1,8 @@
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
+PROJECT_PATHS=(~/src)
+
 # check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
@@ -18,7 +20,6 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/osx
     zgen oh-my-zsh plugins/pj
     zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/thefuck
     zgen oh-my-zsh plugins/vim-interaction
     zgen load chrissicool/zsh-256color
     zgen load djui/alias-tips
@@ -30,7 +31,7 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-completions src
 
     # theme
-    zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+    zgen load denysdovhan/spaceship-prompt spaceship
 
     # colors
     zgen load randy909/base16-shell base16-randy-darker.dark.sh
