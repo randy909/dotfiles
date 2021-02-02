@@ -12,3 +12,5 @@
 	user = randy909
 [include]
 	path = .gitconfig.os
+[diff]
+	colorMoved = zebra
