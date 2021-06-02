@@ -84,8 +84,13 @@ vnoremap <leader>a <C-C>ggVG
 nnoremap Q @q
 "vnoremap Q :norm @q<cr> no :norm for ideavim
 
+" Does what <ALT-ENTER> normally does, easier to press (and not broken)
+nmap <leader><leader> :action ShowIntentionActions<CR>
+vmap <leader><leader> :action ShowIntentionActions<CR>
+
 " TODO: add more mappings for intellij commands like refactors
 
 " TODO: is there any way to specify the list of intellij commands that I want
 " to be forwarded to the ideavim plugin here? Would be so great not to have to
 " configure that each time I do a new install.
+
