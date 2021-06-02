@@ -2,6 +2,9 @@
 " gives a list of supported commands for ideavim. Should review it
 " periodically to see if anything neat is added.
 
+" See a list of actions to use with :action here:
+" https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+
 " Remember that ':set blah?' shows the current value of blah
 
 " When doing 'J' line join, perform smart intellij join
