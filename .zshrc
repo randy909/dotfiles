@@ -18,9 +18,12 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/fasd
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/gradle
-    zgen oh-my-zsh plugins/osx
+    zgen oh-my-zsh plugins/jenv
+    zgen oh-my-zsh plugins/maven
+    zgen oh-my-zsh plugins/macos
     zgen oh-my-zsh plugins/pj
     zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/terraform
     zgen oh-my-zsh plugins/vim-interaction
 
     zgen load RobSis/zsh-completion-generator
