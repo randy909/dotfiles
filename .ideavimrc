@@ -10,6 +10,8 @@
 " https://ikenox.info/blog/getting-started-ideavim/
 "
 " Remember that ':set blah?' shows the current value of blah
+"
+" do :source ~/.ideavimrc to reload this file
 
 " When doing 'J' line join, perform smart intellij join
 " Maybe I should make this a special mapping and leave 'J' alone?
@@ -86,18 +88,81 @@ vmap <leader>x "+x
 noremap  <leader>a ggVG
 vnoremap <leader>a <C-C>ggVG
 
+" Paste from buffer zero which allows pasting the same buffer repeatedly
+vnoremap <leader>0 "0p
+
 " Q normally goes into the frustrating ex mode
 " Repurpose to apply the 'q' macro
 nnoremap Q @q
 "vnoremap Q :norm @q<cr> no :norm for ideavim
 
+" Y normally is the same as yy
+" Make it behave similarly to D and C
+nmap Y y$
+
 " Does what <ALT-ENTER> normally does, easier to press (and not broken)
 nmap <leader><leader> :action ShowIntentionActions<CR>
 vmap <leader><leader> :action ShowIntentionActions<CR>
 
+" <ALT-INSERT> on windows or <CMD-N> on mac
+nmap <leader>n :action Generate<CR>
+vmap <leader>n :action Generate<CR>
+
+" <ctrl-e> or <cmd-e> normally shows recent files sort of like buffer plugins
+" on normal vim so I'm using the same shortcut to open this tool.
+" Type parts of the file you want for a fuzzy search.
+" Remember <ctrl-tab> switches windows a little quicker.
+nmap <leader><space> :action RecentFiles<CR>
+vmap <leader><space> :action RecentFiles<CR>
+
+" <C-P> is an interesting conflict between vim and intellij.
+" In vim <c-p>/<c-n> move up/down in auto-complete windows.
+" If you let IdeaVim handle <c-p> and <c-n> you get this behavior sometimes.
+" But <c-p> gives very useful parameter information when you're coding in
+" default intellij. If you let ideavim handle the shortcut then map it back to
+" the ParameterInfo action only for insert mode it doesn't work out because
+" you are still in insert mode when a completion menu is open.
+" imap <C-P> <C-o>:action ParameterInfo<CR>
+"
+" I've decided to simply let intellij have <c-n> and <c-p> and use my fancy
+" keyboard to do the home row arrow trick for navigating menus. <c-p> is a
+" valuable shortcut in intellij and the hippiecomplete thing doesn't really
+" match the vim experience so I'll leave that at <alt-/>. We'll see if I can
+" remember that shortcut in a time of need. Maybe having only <c-n> mapped to
+" hippie complete would be good as I don't use <c-n> much (goto class might be
+" useful if I made it a habit).
+
 " TODO: add more mappings for intellij commands like refactors
 
-" TODO: is there any way to specify the list of intellij commands that I want
-" to be forwarded to the ideavim plugin here? Would be so great not to have to
-" configure that each time I do a new install.
+" Set which shortcuts go to ideavim
+sethandler <C-2> a:vim
+sethandler <C-S-2> a:ide
+sethandler <C-S-6> a:ide
+sethandler <C-A> a:ide
+sethandler <C-B> a:vim
+sethandler <C-C> a:ide
+sethandler <C-D> a:vim
+sethandler <C-E> a:vim
+sethandler <C-F> a:vim
+sethandler <C-G> a:vim
+sethandler <C-H> a:vim
+sethandler <C-I> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:ide
+sethandler <C-L> a:vim
+sethandler <C-M> a:vim
+sethandler <C-N> a:ide " use <alt-/> to complete local words
+sethandler <C-O> a:vim
+sethandler <C-P> a:ide
+sethandler <C-Q> a:vim
+sethandler <C-R> a:vim
+sethandler <C-S> a:ide
+sethandler <C-T> a:vim
+sethandler <C-U> a:vim
+sethandler <C-V> a:vim
+sethandler <C-W> a:vim
+sethandler <C-X> a:vim
+sethandler <C-Y> a:vim
+sethandler <C-[> a:vim
+sethandler <C-]> a:vim
 
